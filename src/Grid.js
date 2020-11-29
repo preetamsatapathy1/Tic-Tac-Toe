@@ -9,7 +9,7 @@ class Grid extends React.Component{
     }
        
     handleClick = e =>{
-        let output = this.state.player1 ? "x" : "O"
+        let output = this.state.player1 ? "X" : "O"
         let index = parseInt(e.target.id)
         if(this.props.input[index] != null){
             return

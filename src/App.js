@@ -10,7 +10,7 @@ class App extends React.Component {
   };
 
   handleInput = (output, index) => {
-  
+    console.log(output)
     if(this.state.winner == true){
       return
     }
