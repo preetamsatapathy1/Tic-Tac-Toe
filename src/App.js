@@ -10,7 +10,6 @@ class App extends React.Component {
   };
 
   handleInput = (output, index) => {
-    console.log(output)
     if(this.state.winner == true){
       return
     }
@@ -50,10 +49,12 @@ class App extends React.Component {
           }
           this.setState({
             winner : true,
+            nextPlayer : this.state.input[combination[0]]
           })
           return
       }
       else{
+        
         let nextPlayer = ""
         if (output === "X"){
           nextPlayer = "O"
@@ -63,7 +64,7 @@ class App extends React.Component {
         }
         this.setState({
           nextPlayer:nextPlayer
-        })
+        },() => console.log(this.state.nextPlayer))
       }
     }
   };
